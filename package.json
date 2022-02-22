@@ -1,6 +1,6 @@
 {
   "name": "tree2readme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "根据项目目录生成readme",
   "main": "index.js",
   "bin": {
