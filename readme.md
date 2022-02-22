@@ -41,7 +41,8 @@
 
 1. `npm i tree2readme -g`
 2. `cd /test/dir`
-3. 输入 `tree2readme`
+3. 输入 `tree2readme start`
 
 ## 参数
-1. `--exclude <exclude>`, 排除不需要在readme中列出的文件类型，默认排除图片
+1. `--exclude <regexp>`, 排除不需要在readme中列出的文件类型，默认排除图片
+   1. `tree2readme start --exclude /\.md$/` 排除md文件
