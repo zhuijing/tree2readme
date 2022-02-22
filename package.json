@@ -1,0 +1,28 @@
+{
+  "name": "tree2readme",
+  "version": "1.0.0",
+  "description": "根据项目目录生成readme",
+  "main": "index.js",
+  "bin": {
+    "dir2readme": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "auto",
+    "readme",
+    "dir2readme",
+    "tree2readme"
+  ],
+  "author": {
+    "email": "1401271211@qq.com",
+    "name": "曹泽鹏",
+    "url": "https://zhuijing.github.io/"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.0.0",
+    "directory-tree": "^3.2.2"
+  }
+}

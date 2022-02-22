@@ -1,0 +1,15 @@
+.idea/
+node_modules
+.DS_Store
+*.log
+*.project
+packages/test
+dist
+packages/wb-cli-service/**/build
+temp
+.vscode/
+yarn.lock
+.cache
+src
+.history
+example
