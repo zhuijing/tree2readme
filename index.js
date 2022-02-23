@@ -11,8 +11,6 @@ const readmeStart = [
   '```'
 ];
 const readmeEnd = [
-  '└── ',
-  'index.html',
   '\n',
   '```'
 ];
@@ -35,8 +33,8 @@ function dfs (trees, opefn) {
       });
     }
   };
-  trees.forEach(item => {
-    walk(item);
+  trees.forEach((item,index) => {
+    walk(item,1,index === trees.length -1);
   });
 }
 function ope (node, depth, isEnd) {
@@ -45,9 +43,7 @@ function ope (node, depth, isEnd) {
     if (i < depth - 1) {
       pre += baseLine[1];
     } else {
-      // console.log('isEnd', isEnd);
       pre += isEnd ? baseLine[0] : baseLine[2];
-      // pre += baseLine[2];
     }
   }
   fs.writeFileSync('readme.md', `${pre + node.name}\n`, { flag: 'a+' });
@@ -61,7 +57,15 @@ module.exports = function (pathArg, args) {
   addStart();
   fs.writeFileSync('readme.md', `\n${filteredTree.name}\n`, { flag: 'a+' });
   if (filteredTree.children) {
-    dfs(filteredTree.children, ope);
+    const sortChildren = filteredTree.children.sort((a,b )=>{
+      if(b.name ==='index.html'){
+        return -1
+      } else {
+        return 1
+      }
+    })
+    console.log('sortChildren', sortChildren)
+    dfs(sortChildren, ope);
   }
   addEnd();
 };

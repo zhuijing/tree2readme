@@ -4,7 +4,7 @@
   "description": "根据项目目录生成readme",
   "main": "index.js",
   "bin": {
-    "dir2readme": "bin/index.js"
+    "tree2readme": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
